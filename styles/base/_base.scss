@@ -1,4 +1,4 @@
-@use "../tokens/colors" as *;
+@use "../tokens/colors" as colors;
 
 body {
   font-family: "Source Sans Pro", sans-serif;
@@ -8,7 +8,7 @@ body {
 nav {
   height: 4rem;
   width: 100%;
-  background-color: $pink;
+  background-color: colors.$pink;
   display: flex;
   align-items: center;
   padding-inline: 1rem;
@@ -16,12 +16,12 @@ nav {
   position: sticky;
 
   a {
-    color: $white;
+    color: colors.$white;
     text-decoration: none;
   }
 
   .heading {
-    color: $red;
+    color: colors.$red;
     margin-right: auto;
   }
 
@@ -39,7 +39,7 @@ nav {
       }
 
       &.btn {
-        border: 2px solid $black;
+        border: 2px solid colors.$black;
         border-radius: 100vmax;
         transition: background-color 250ms;
 
@@ -57,7 +57,7 @@ nav {
   .toggle {
     background: none;
     border: 0;
-    color: $white;
+    color: colors.$white;
     display: none;
   }
 }
@@ -88,7 +88,7 @@ nav {
       top: 3rem;
       z-index: 100;
       flex-direction: column;
-      background-color: rgba($black, 0.2);
+      background-color: rgb(colors.$black, 0.2);
       backdrop-filter: blur(5px);
       width: 20%;
       min-width: 100px;
