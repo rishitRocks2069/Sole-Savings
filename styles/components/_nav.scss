@@ -1,20 +1,20 @@
-@use "../tokens/colors" as *;
+@use "../tokens/colors" as colors;
 
 nav {
   height: 4rem;
   width: 100%;
-  background-color: $pink;
+  background-color: colors.$pink;
   display: flex;
   align-items: center;
   padding-inline: 1rem;
   position: relative;
   position: sticky;
   a {
-    color: $white;
+    color: colors.$white;
     text-decoration: none;
   }
   .heading {
-    color: $red;
+    color: colors.$red;
     margin-right: auto;
   }
   ul {
@@ -28,15 +28,16 @@ nav {
         filter: opacity(70%);
       }
       &.btn {
-        border: 2px solid $black;
+        border: 2px solid colors.$black;
         border-radius: 100vmax;
         transition: background-color 250ms;
         &:hover {
-          background-color: rgb($black / 0.5);
+          background-color: rgb(colors.$black / 0.5);
         }
       }
     }
   }
+
   .toggle {
     background: none;
     border: 0;
@@ -51,18 +52,22 @@ nav {
       display: inline-block;
       position: absolute;
       right: 1rem;
+
       #closed {
         display: none;
       }
     }
+
     .toggle.open {
       #closed {
         display: block;
       }
+
       #open {
         display: none;
       }
     }
+
     ul {
       position: absolute;
       right: 0;
@@ -78,9 +83,11 @@ nav {
       transform: scaleX(1);
       transform-origin: right;
       transition: transform 250ms;
+
       &.hidden {
         transform: scaleX(0);
       }
+
       li {
         align-self: flex-end;
         margin-right: 1rem;
